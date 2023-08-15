@@ -9,56 +9,133 @@
     android:orientation="vertical"
     android:background="#BFEBFF"
     >
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:padding="5dp"
-        >
+        android:padding="5dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/videothumbnail"
                 android:layout_width="125dp"
                 android:layout_height="170dp"
                 android:background="#2d2d2d"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop" />
+
             <TextView
                 android:id="@+id/txttitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Txt title"
                 android:layout_marginTop="10dp"
+                android:text="Txt title"
                 android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/txtcategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:padding="8dp"
                 android:background="#22D7DD"
-                android:text="Category"/>
+                android:padding="8dp"
+                android:text="Category" />
+
             <TextView
                 android:id="@+id/txtdescription"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textSize="25sp"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:gravity="center"
+                android:text="Description"
+                android:textSize="18sp" />
+
             <RadioGroup
                 android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:layout_marginTop="30dp"
+                android:orientation="vertical" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/check_payment"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:text="Pagar por adelantado" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center_horizontal"
+                android:id="@+id/layout_payment"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/TarjClabe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CLABE:"
+                        android:textSize="18sp"
+                        android:inputType="number"
+                        android:maxLength="16">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/TarjVenc"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:hint="VENC"
+                        android:inputType="date"
+                        android:maxLength="4" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/TarjCvv"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="25dp"
+                        android:hint="CVV:"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:minLines="1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Terminar pedido"
                 />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
