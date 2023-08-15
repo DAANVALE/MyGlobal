@@ -4,6 +4,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class Video {
 
+    private int Id;
     private String Title;
     private String Category;
     private String Description;
@@ -18,6 +19,8 @@ public class Video {
         Description = description;
         Thumbnail = thumbnail;
     }
+
+    public int getId(){ return Id; }
 
     public String getTitle() {
         return Title;
@@ -34,6 +37,8 @@ public class Video {
     public int getThumbnail() {
         return Thumbnail;
     }
+
+    public void setId(int id){ Id = id; }
 
     public void setTitle(String title) {
         Title = title;

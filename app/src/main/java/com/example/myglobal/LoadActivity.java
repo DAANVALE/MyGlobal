@@ -19,6 +19,7 @@ public class LoadActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(LoadActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         },SPLASH_TIME_OUT);
     }
