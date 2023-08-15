@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.Gravity;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -15,6 +20,8 @@ public class Video_Activity extends AppCompatActivity {
 
     private TextView tvtitle, tvdescription, tvcategory;
     private RadioGroup radioGroup;
+    private CheckBox checkBox;
+    private LinearLayout layout_payment;
     private ImageView img;
 
     @Override
@@ -28,6 +35,8 @@ public class Video_Activity extends AppCompatActivity {
         img = (ImageView) findViewById(R.id.videothumbnail);
 
         radioGroup = findViewById(R.id.radioGroup);
+        checkBox = findViewById(R.id.check_payment);
+        layout_payment = findViewById(R.id.layout_payment);
 
         for (int i = 1; i <= 4; i++) {
             RadioButton radioButton = new RadioButton(this);
@@ -38,6 +47,18 @@ public class Video_Activity extends AppCompatActivity {
 
             radioGroup.addView(radioButton);
         }
+
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Cambiar la visibilidad del LinearLayout
+                if (isChecked) {
+                    layout_payment.setVisibility(View.VISIBLE);
+                } else {
+                    layout_payment.setVisibility(View.GONE);
+                }
+            }
+        });
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
