@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -16,6 +17,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.Lottie;
+
 public class Video_Activity extends AppCompatActivity {
 
     private TextView tvtitle, tvdescription, tvcategory;
@@ -23,6 +26,8 @@ public class Video_Activity extends AppCompatActivity {
     private CheckBox checkBox;
     private LinearLayout layout_payment;
     private ImageView img;
+
+    private Button btn_dragdrop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,8 @@ public class Video_Activity extends AppCompatActivity {
         radioGroup = findViewById(R.id.radioGroup);
         checkBox = findViewById(R.id.check_payment);
         layout_payment = findViewById(R.id.layout_payment);
+
+        btn_dragdrop = findViewById(R.id.btn_dragdrop);
 
         for (int i = 1; i <= 4; i++) {
             RadioButton radioButton = new RadioButton(this);
@@ -66,6 +73,14 @@ public class Video_Activity extends AppCompatActivity {
                 RadioButton selectedRadioButton = findViewById(checkedId);
                 String selectedText = selectedRadioButton.getText().toString();
                 Toast.makeText(Video_Activity.this, "Seleccionado: " + selectedText, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btn_dragdrop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itn = new Intent(Video_Activity.this, DragDrop_Activity.class);
+                startActivity(itn);
             }
         });
 
