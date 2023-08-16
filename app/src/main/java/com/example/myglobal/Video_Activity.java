@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -26,8 +27,9 @@ public class Video_Activity extends AppCompatActivity {
     private CheckBox checkBox;
     private LinearLayout layout_payment;
     private ImageView img;
+    private Button btn_order, btn_dragdrop;
 
-    private Button btn_dragdrop;
+    private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,10 @@ public class Video_Activity extends AppCompatActivity {
         checkBox = findViewById(R.id.check_payment);
         layout_payment = findViewById(R.id.layout_payment);
 
-        btn_dragdrop = findViewById(R.id.btn_dragdrop);
+        btn_order = (Button) findViewById(R.id.btn_order);
+        btn_dragdrop = (Button) findViewById(R.id.btn_dragdrop);
+
+        editText = (EditText) findViewById(R.id.remitente);
 
         for (int i = 1; i <= 4; i++) {
             RadioButton radioButton = new RadioButton(this);
@@ -73,6 +78,15 @@ public class Video_Activity extends AppCompatActivity {
                 RadioButton selectedRadioButton = findViewById(checkedId);
                 String selectedText = selectedRadioButton.getText().toString();
                 Toast.makeText(Video_Activity.this, "Seleccionado: " + selectedText, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btn_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itn = new Intent(Video_Activity.this, MainActivity.class);
+                Toast.makeText(Video_Activity.this, "Procesado: " + editText.getText(), Toast.LENGTH_SHORT).show();
+                startActivity(itn);
             }
         });
 
