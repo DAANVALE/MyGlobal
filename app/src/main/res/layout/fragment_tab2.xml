@@ -6,11 +6,21 @@
     tools:context=".Tab2">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Fragment2"
-        android:textSize="30sp"
-        android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:padding="30dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hecho por:\n\n21310445 - Edwin Giovanni Vega Torres\n21310441 - Daan Yael Valencia Alvarez"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
 </FrameLayout>

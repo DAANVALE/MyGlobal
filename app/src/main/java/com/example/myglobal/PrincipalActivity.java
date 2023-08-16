@@ -1,13 +1,17 @@
 package com.example.myglobal;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,7 +22,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, seccion1, seccion2;
+        LinearLayout home, seccion1, seccion2, seccion3;
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
@@ -33,10 +37,12 @@ public class PrincipalActivity extends AppCompatActivity {
         menu = findViewById(R.id.menu);
         seccion1 = findViewById(R.id.seccion1);
         seccion2 = findViewById(R.id.seccion2);
+        seccion3 = findViewById(R.id.seccion3);
 
         tabLayout = findViewById(R.id.tablayout);
         viewPager2 = findViewById(R.id.viewPager);
         viewPagerAdpter = new ViewPagerAdpter(this);
+
         viewPager2.setAdapter(viewPagerAdpter);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -81,8 +87,12 @@ public class PrincipalActivity extends AppCompatActivity {
                 redirectActivity(PrincipalActivity.this, MainActivity.class);
             }
         });
-
-
+        seccion3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(PrincipalActivity.this, DragDrop_Activity.class);
+            }
+        });
 
     }
     public static void openDrawer(DrawerLayout drawerLayout){
