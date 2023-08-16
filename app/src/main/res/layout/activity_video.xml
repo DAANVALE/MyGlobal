@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Video_Activity"
     android:orientation="vertical"
-    android:background="#BFEBFF"
+    android:background="@color/cardview_dark_background"
     >
 
     <ScrollView
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="#22D7DD"
+                android:background="@color/purple_200"
                 android:padding="8dp"
                 android:text="Category" />
 
@@ -152,14 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:text="Terminar pedido" />
-
-            <Button
-                android:id="@+id/btn_dragdrop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="Drag and drop"
+                android:text="Terminar pedido"
                 />
 
         </LinearLayout>

@@ -28,6 +28,6 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Video Title"
-            android:textColor="#123456" />
+            android:textColor="#D2D2D2" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

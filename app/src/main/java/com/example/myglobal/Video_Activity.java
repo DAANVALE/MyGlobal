@@ -27,7 +27,7 @@ public class Video_Activity extends AppCompatActivity {
     private CheckBox checkBox;
     private LinearLayout layout_payment;
     private ImageView img;
-    private Button btn_order, btn_dragdrop;
+    private Button btn_order;
 
     private EditText editText;
 
@@ -46,8 +46,6 @@ public class Video_Activity extends AppCompatActivity {
         layout_payment = findViewById(R.id.layout_payment);
 
         btn_order = (Button) findViewById(R.id.btn_order);
-        btn_dragdrop = (Button) findViewById(R.id.btn_dragdrop);
-
         editText = (EditText) findViewById(R.id.remitente);
 
         for (int i = 1; i <= 4; i++) {
@@ -89,15 +87,6 @@ public class Video_Activity extends AppCompatActivity {
                 startActivity(itn);
             }
         });
-
-        btn_dragdrop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent itn = new Intent(Video_Activity.this, DragDrop_Activity.class);
-                startActivity(itn);
-            }
-        });
-
 
         //recibir data
         Intent intent = getIntent();

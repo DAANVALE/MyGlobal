@@ -6,11 +6,71 @@
     tools:context=".Tab3">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Fragment3"
-        android:textSize="30sp"
-        android:textColor="@color/black"/>
+        android:layout_marginTop="10dp"
+        android:padding="35dp">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnDate"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TVDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Date"
+                android:textSize="20sp"
+                android:gravity="bottom"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnHour"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Hora"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/TVHour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hour"
+                android:textSize="20sp"
+                android:gravity="bottom"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

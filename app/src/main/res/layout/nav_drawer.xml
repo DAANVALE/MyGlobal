@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_200"
-            android:text="seccion 1"
+            android:text="Inicio"
             android:textSize="20sp"
             android:drawablePadding="8dp"/>
     </LinearLayout>
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_200"
-            android:text="seccion 2"
+            android:text="Ordenar"
             android:textSize="20sp"
             android:drawablePadding="8dp"/>
     </LinearLayout>
@@ -74,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_200"
-            android:text="seccion 3"
+            android:text="Mini-Juego"
             android:textSize="20sp"
             android:drawablePadding="8dp"/>
     </LinearLayout>
