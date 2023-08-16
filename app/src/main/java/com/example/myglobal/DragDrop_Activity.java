@@ -18,14 +18,6 @@ public class DragDrop_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_drag_drop);
 
         dragView = (ImageView) findViewById(R.id.dragview);
-
-        dragView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent itn = new Intent(DragDrop_Activity.this, MainActivity.class);
-                startActivity(itn);
-            }
-        });
     }
 
     float x,y,dx,dy;
