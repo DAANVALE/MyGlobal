@@ -58,6 +58,24 @@
                 android:text="Description"
                 android:textSize="18sp" />
 
+            <Button
+                android:id="@+id/btnDate"
+                android:onClick="openDatePicker"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnTime"
+                android:onClick="popTimePicker"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Hora"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
