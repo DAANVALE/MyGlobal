@@ -16,6 +16,33 @@
 
     <include
       layout="@layout/toolbar"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem
+            android:text="Tab"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+      <com.google.android.material.tabs.TabItem
+          android:text="Tab"
+          android:textColor="@color/black"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <com.google.android.material.tabs.TabItem
+          android:text="Tab"
+          android:textColor="@color/black"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+      android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
   </LinearLayout>
   
   <RelativeLayout
